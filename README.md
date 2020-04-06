@@ -20,12 +20,14 @@ This is a modified version fron [opencensus-quickstarts](https://github.com/open
 ```go
 func main() {
 	// 1. Configure exporter to export traces to Zipkin.
-	localEndpoint, err := openzipkin.NewEndpoint("go-quickstart", "192.168.1.5:5454")
+	// The hostPort here is just for illustration purposes
+	localEndpoint, err := openzipkin.NewEndpoint("go-quickstart", "127.0.0.1:5454")
 	if err != nil {
 		log.Fatalf("Failed to create the local zipkinEndpoint: %v", err)
 	}
+	// Configure where data will be exported to e.g.
 	reporter := zipkinHTTP.NewReporter("http://localhost:9411/api/v2/spans")
-	ze := zipkin.NewExporter(reporter, localEndpoint)
+	ze := oczipkin.NewExporter(reporter, localEndpoint)
 	trace.RegisterExporter(ze)
 
 	// 2. Configure 100% sample rate, otherwise, few traces will be sampled.
@@ -52,7 +54,7 @@ if err != nil {
   log.Fatalf("Failed to create the local zipkinEndpoint: %v", err)
 }
 reporter := zipkinHTTP.NewReporter("http://localhost:9411/api/v2/spans")
-ze := zipkin.NewExporter(reporter, localEndpoint)
+ze := oczipkin.NewExporter(reporter, localEndpoint)
 trace.RegisterExporter(ze)
 ```
 
