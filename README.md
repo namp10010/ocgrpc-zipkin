@@ -1,5 +1,5 @@
 # ocgrpc-zipkin
-Opensensys Grpc sample code with zipkin exporter.
+Opencensus Grpc sample code with zipkin exporter.
 
 This is a modified version fron [opencensus-quickstarts](https://github.com/opencensus-otherwork/opencensus-quickstarts) with instructions of how to run the code with zipkin Docker image.
 
