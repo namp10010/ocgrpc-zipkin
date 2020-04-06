@@ -8,7 +8,7 @@ import (
 	"log"
 	"time"
 
-	"contrib.go.opencensus.io/exporter/zipkin"
+	oczipkin "contrib.go.opencensus.io/exporter/zipkin"
 	"go.opencensus.io/trace"
 
 	openzipkin "github.com/openzipkin/zipkin-go"
@@ -24,7 +24,7 @@ func main() {
 	}
 	// Configure where data will be exported to e.g.
 	reporter := zipkinHTTP.NewReporter("http://localhost:9411/api/v2/spans")
-	ze := zipkin.NewExporter(reporter, localEndpoint)
+	ze := oczipkin.NewExporter(reporter, localEndpoint)
 	trace.RegisterExporter(ze)
 
 	// 2. Configure 100% sample rate, otherwise, few traces will be sampled.
