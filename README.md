@@ -14,7 +14,7 @@ This is a modified version fron [opencensus-quickstarts](https://github.com/open
 8. Click Find Traces, and you should see a trace.
 9. Click into that, and you should see the details.
 
-![](go-tracing-zipkin.png)
+![](trace.png)
 
 #### How does it work?
 ```go
