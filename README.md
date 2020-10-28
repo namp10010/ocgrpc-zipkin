@@ -1,7 +1,7 @@
-# ocgrpc-zipkin
-Opencensus Grpc sample code with zipkin exporter.
+# ocgrpc-tracing-zipkin
+Opencensus Grpc tracing sample code with zipkin exporter.
 
-This is a modified version fron [opencensus-quickstarts](https://github.com/opencensus-otherwork/opencensus-quickstarts) with instructions of how to run the code with zipkin Docker image.
+This is a modified version from [opencensus-quickstarts](https://github.com/opencensus-otherwork/opencensus-quickstarts) with instructions of how to run the code with zipkin Docker image.
 
 #### Run it locally
 1. Clone this repo
